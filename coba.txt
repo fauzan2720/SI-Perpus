@@ -1,0 +1,15 @@
+// nama anggota
+<select class="form-select @error('id_member') is-invalid @enderror" name="id_member" id="nama_anggota">
+    <option selected disabled>Pilih</option>
+    @foreach ($members as $member)
+    <option value="{{ $member->id }}">{{ $member->nama }}</option>
+    @endforeach
+</select>
+
+// nama petugas
+<select class="form-select @error('id_petugas') is-invalid @enderror" name="id_petugas" id="nama_petugas">
+    <option selected disabled>Pilih</option>
+    @foreach ($officers as $officer)
+    <option value="{{ $officer->id }}">{{ $officer->nama }}</option>
+    @endforeach
+</select>
